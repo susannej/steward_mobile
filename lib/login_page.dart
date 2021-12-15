@@ -1,6 +1,7 @@
 //import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'loginConfig.dart';
 import 'dashboard.dart';
 import 'package:alert/alert.dart';
 
@@ -93,8 +94,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           child: const Text('Konfiguration...', style: TextStyle(color: Colors.white, fontSize: 20),),
           onPressed: () {
-            Alert(message: "URL = https://bla.bla.bla").show();
-            print("asdfasdf");
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginConfigPage()));
           }
         )
       )
