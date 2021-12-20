@@ -1,7 +1,6 @@
 //import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:alert/alert.dart';
 
 class LoginConfigPage extends StatefulWidget {
   @override
@@ -23,6 +22,7 @@ class _LoginConfigPageState extends State<LoginConfigPage> {
     return SafeArea(
         child: Scaffold(
             appBar: AppBar(
+              backgroundColor: Colors.indigo,
               title: Text('Steward Konfiguration'),
               actions: <Widget>[
                 IconButton(

@@ -2,13 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'loginConfig.dart';
-import 'dashboard.dart';
+import 'dashboard1.dart';
 import 'package:alert/alert.dart';
 
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
+
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
@@ -30,17 +31,17 @@ class _LoginPageState extends State<LoginPage> {
     const inputEmail = Padding(
       padding: EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 10),
       child: TextField(
-        keyboardType: TextInputType.emailAddress,
-        style: TextStyle(color: Colors.white),
+        keyboardType: TextInputType.name,
+        //style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.white, width: 2.0)
-          ),
-          focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white, width: 2.0)
-          ),
+          //enabledBorder: OutlineInputBorder(
+            //borderSide: BorderSide(color: Colors.white, width: 2.0)
+          //),
+          //focusedBorder: OutlineInputBorder(
+              //borderSide: BorderSide(color: Colors.white, width: 2.0)
+          //),
           labelText: 'Benutzername',
-          labelStyle: TextStyle(color: Colors.white),
+          //labelStyle: TextStyle(color: Colors.white),
           /*
             hintText: 'Email',
             contentPadding: EdgeInsets.symmetric(horizontal: 25, vertical: 20),
@@ -54,19 +55,19 @@ class _LoginPageState extends State<LoginPage> {
     const inputPassword = Padding(
       padding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
       child: TextField(
-        keyboardType: TextInputType.emailAddress,
+        keyboardType: TextInputType.text,
         obscureText: true,
-        style: TextStyle(color: Colors.white),
+        //style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
-          hintStyle: TextStyle(color: Colors.white),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.white, width: 2.0)
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.white, width: 2.0)
-          ),
+          //hintStyle: TextStyle(color: Colors.white),
+          //enabledBorder: OutlineInputBorder(
+            //borderSide: BorderSide(color: Colors.white, width: 2.0)
+          //),
+          //focusedBorder: OutlineInputBorder(
+            //borderSide: BorderSide(color: Colors.white, width: 2.0)
+          //),
           labelText: 'Passwort',
-          labelStyle: TextStyle(color: Colors.white),
+          //labelStyle: TextStyle(color: Colors.white),
         ),
       ),
     );
@@ -78,8 +79,8 @@ class _LoginPageState extends State<LoginPage> {
           child: const Text('Login', style: TextStyle(color: Colors.white, fontSize: 20)),
           //color: Colors.black87,
           onPressed: () {
-            Alert(message: "Bla").show();
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Dashboard()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Dashboard1()));
+            //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
           },
         ),
       ),
@@ -92,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
           style: OutlinedButton.styleFrom(
             side: const BorderSide(width: 2.0, color: Colors.blue),
           ),
-          child: const Text('Konfiguration...', style: TextStyle(color: Colors.white, fontSize: 20),),
+          child: const Text('Konfiguration...', style: TextStyle(/*color: Colors.white,*/ fontSize: 20),),
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginConfigPage()));
           }
@@ -120,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                     titleString,
                     Container(
                       decoration: BoxDecoration(
-                          color: Colors.white70,
+                          color: Colors.white,
                           borderRadius: BorderRadius.all(Radius.circular(10.0))),
                       child: Column(
                         children: <Widget>[
